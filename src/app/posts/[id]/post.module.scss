@@ -1,0 +1,38 @@
+.container {
+    padding: 10px;
+
+    .mainPost {
+        min-height: 200px;
+
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 10px;
+    }
+
+    .comments {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container .comments {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .container .comments {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .container .comments {
+        grid-template-columns: 1fr;
+    }
+}
