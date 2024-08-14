@@ -10,12 +10,19 @@ import { Button } from '@/components/ui/button';
 import { CommentCard } from '@/components/commentCard/commentCard';
 
 import styles from "./post.module.scss";
+import getSeoConfig from '@/lib/seo';
+import { Metadata } from 'next';
 
 type Props = {
     params: {
         id: string;
     }
 }
+
+export const metadata: Metadata = {
+    ...getSeoConfig("Post", "On this page you can view post")
+};
+
 
 const fetchPostData = async (id: string) => {
 
