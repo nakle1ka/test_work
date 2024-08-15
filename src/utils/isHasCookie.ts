@@ -1,5 +1,5 @@
 export function isHasCookie(name: string): boolean {
     return !!document.cookie
         .split("; ")
-        .filter(el => el.startsWith(name))[0]
+        .find(el => el.startsWith(name))
 }
